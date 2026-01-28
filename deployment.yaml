@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mlops-api-deployment
 spec:
-  replicas: 2  # This tells K8s to always keep 2 copies running!
+  replicas: 2  
   selector:
     matchLabels:
       app: mlops-api
@@ -15,7 +15,7 @@ spec:
       containers:
       - name: mlops-api
         image: mlops-api:latest
-        imagePullPolicy: Never # Crucial: tells K8s to use the image on your Mac, not look online
+        imagePullPolicy: Never
         ports:
         - containerPort: 8000
 ---
@@ -30,4 +30,4 @@ spec:
   ports:
     - port: 8000
       targetPort: 8000
-      nodePort: 30001 # This is the "external" port we will use
+      nodePort: 30001 
