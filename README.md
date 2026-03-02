@@ -1,5 +1,5 @@
 # MLOps Scoring API
-This repository contains the incremental API project for the MLOps course.
+This repository contains the incremental API project for the MLOps course. 
 
-## Author
+# Author 
 Tamara Dokic 
